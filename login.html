@@ -1,0 +1,101 @@
+
+<html>
+
+<head> 
+<title> Login </title>
+<link href="css/style.css" ref="stylesheet" type=spreadsheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+
+</head>
+
+<style>
+
+ul {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  family:'Tangerine', cursive; 
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 70px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+#menu li
+{
+	display: inline ;
+	padding-right: 100px;
+	font-size: 15px;
+}
+
+
+</style>
+
+<body style="background-color: FAF2DA;">
+
+<ul style="font-size: 52px;">
+
+  <li> <a href="home page .html" >   <b>Home</b>   </a></li>
+  <li> <a href="products.html " ><b>Products </b>  </a></li>
+  <li><a href="categories.html" ><b>Categories </b> </a></li>
+  <li><a href="contactus.html" ><b>Contact us</b> </a></li>
+  <li><a href="login.html" ><b> Register/Login </b> </a></li>
+
+</ul>
+<br> </br>
+
+
+<div class="wrapper">
+    <header>Login Form</header>
+    <form method="POST" action="login.php" name="login">
+      <div class="field email">
+        <div class="input-area">
+          <input type="text" id="email" name="email" placeholder="Email Address">
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Email can't be blank</div>
+      </div>
+      <div class="field password">
+        <div class="input-area" font-family:sans-serif;>
+          <input type="password" id="password" name="password"  placeholder="Password">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Password can't be blank</div>
+      </div>
+      <div class="pass-txt" style="font-size:35px;"><a href="#">Forgot password?</a></div>
+      <a href="welcome.html"><input type="submit" value="Login" style="font-size:35px; font-family:'Tangerine', cursive;"></a>
+    </form>
+    <div class="sign-txt" style="font-size: 40px;">Not yet member? <a href="register.html">Signup now</a></div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>

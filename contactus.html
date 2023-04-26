@@ -1,0 +1,154 @@
+<html>
+
+<head> 
+<title> Login </title>
+<link href="css/style.css" ref="stylesheet" type=spreadsheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+ul {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-family:'Tangerine', cursive; 
+  font-size: 52px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 70px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+#menu li
+{
+	display: inline ;
+	padding-right: 100px;
+	font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  font-family:'Tangerine', cursive; 
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  font-size: 100px;
+  background-color: EED7CE;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+</style>
+
+<body style="background-color: FAF2DA;">
+
+<ul style="font-size: 52px;">
+
+  <li> <a href="home page .html" >   <b>Home</b>   </a></li>
+  <li> <a href="Products.html " ><b>Products </b>  </a></li>
+  <li><a href="Categories.html" ><b>Categories </b> </a></li>
+  <li><a href="contactus.html" ><b>Contact us</b> </a></li>
+  <li><a href="login.html" ><b> Register/Login </b> </a></li>
+
+</ul>
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup-cake, or leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="343-3435119_kiki-delivery-service-bakery.jpg" style="width:100%; height:80%; margin:20px; padding-left:0px; margin-top: 100px;">
+    <p style="font-size:50px;"> Call us on : 1234-2424-32 <br> </br> Email addres : esperance@gmail.com <br> </br> Address : 23 street, 5th lane , Tower building , Near pillafort bridge.
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="Default">Select </option>
+          <option value="India">India</option>
+          <option value="canada">Canada</option>
+          <option value="japan">Japan</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

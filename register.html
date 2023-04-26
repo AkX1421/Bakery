@@ -1,0 +1,231 @@
+
+<html>
+
+<head> 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+
+<title>registration form</title>
+<script>
+
+
+
+function formValidation() {
+
+var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const phonenumber = document.getElementById("phonenumber");
+const gender = document.getElementById("gender");
+const language = document.getElementById("language");
+const zipcode = document.getElementById("zipcode");
+
+  
+  if (name.value.length < 2 || name.value.length > 20) {
+    alert("Name length should be more than 2 and less than 21");
+    name.focus();
+    return false;
+  }
+
+  if (!email.value.match(validRegex)) {
+    alert("Please enter a valid email!");
+    email.focus();
+    return false;
+  }
+
+
+  if (!password.value.match(/^.{5,15}$/)) {
+    alert("Password length must be between 5-15 characters!");
+    password.focus();
+    return false;
+  }
+  
+
+  if (!phonenumber.value.match(/^[1-9][0-9]{9}$/)) {
+    alert("Phone number must be 10 characters long number and first digit can't be 0!");
+    phonenumber.focus();
+    return false;
+  }
+  
+
+  if (gender.gender.value === "") {
+    alert("Please select your gender!");
+    return false;
+  }
+  
+
+  if (language.value === "") {
+    alert("Please select your language!");
+    return false;
+  }
+
+
+  
+  if (!zipcode.value.match(/^[0-9]{6}$/)) {
+    alert("Zip code must be 6 characters long number!");
+    zipcode.focus();
+    return false;
+  }
+  return true;
+}
+
+
+</script>
+</head>
+
+<style>
+
+ul {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#333;
+  font-family:'Tangerine', cursive;
+  font-size:50px; 
+}
+
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 70px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+#menu li
+{
+	display: inline;
+	padding-right: 100px;
+	font-size: 15px;
+}
+
+
+* {
+  margin: 0
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container h1 {
+  color: white;
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+.registartion-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.registartion-form input,
+.registartion-form select,
+.registartion-form textarea {
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  font-family: sans-serif;
+}
+
+.registartion-form input:focus,
+.registartion-form textarea:focus {
+  box-shadow: 3px 3px 10px rgb(228, 228, 228), -3px -3px 10px rgb(224, 224, 224);
+}
+
+.registartion-form .submit {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 20px;
+  color: rgb(44, 44, 44);
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.registartion-form .submit:hover {
+  box-shadow: 3px 3px 6px rgb(255, 214, 176);
+}
+
+</style>
+
+<body style="background-color: FAF2DA;" onload="document.registration.userid.focus();">
+
+<ul>
+
+  <li> <a href="home page .html" > <b>Home</b>   </a></li>
+  <li> <a href="products.html " ><b>Products </b>  </a></li>
+  <li> <a href="categories.html" ><b>Categories </b> </a></li>
+  <li> <a href="contactus.html" ><b>Contact us</b> </a></li>
+  <li> <a href="login.html" >  <b> Register/Login </b> </a></li>
+
+</ul>
+
+
+<br> </br>
+<br> </br>
+<br> </br>
+<div class="container">
+  <h1 style="font-family:'Tangerine', cursive;
+  font-size:100px; color:#333; ">Registration form </h1>
+  <form method="POST" action="signup.php" name="registration" class="registartion-form" onsubmit="return formValidation()">
+    <table>
+      <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text" name="name" id="name" placeholder="your name"></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="text" name="email" id="email" placeholder="your email"></td>
+      </tr>
+      <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="password" name="password" id="password"></td>
+      </tr>
+      <tr>
+        <td><label for="phonenumber">Phone Number:</label></td>
+        <td><input type="number" name="phonenumber" id="phonenumber"></td>
+      </tr>
+      <tr>
+        <td><label for="gender">Gender:</label></td>
+        <td>Male: <input type="radio" name="gender" value="male">
+          Female: <input type="radio" id="gender" name="gender" value="female">
+          Other: <input type="radio" id="gender" name="gender" value="other"></td>
+      </tr>
+      <tr>
+        <td><label for="zipcode">Zip Code:</label></td>
+        <td><input type="number" name="zipcode" id="zipcode"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="submit" class="submit" value="submit" /></td>
+      </tr>
+    </table>
+  </form>
+</div>
+</body>
+</html>
